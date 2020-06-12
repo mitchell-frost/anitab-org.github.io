@@ -1,5 +1,7 @@
+import { createStackNavigator } from '@react-navigation/stack';
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { View, Button, Text, Animated } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import Header from './Components/Header';
 import Content from './Components/Content';
 

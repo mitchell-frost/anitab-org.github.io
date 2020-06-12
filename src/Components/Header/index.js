@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { usestate } from 'react';
 import {
   View,
   Image,
   Text,
   TouchableHighlight,
   StyleSheet,
+  Animated,
+  Button
 } from 'react-native';
 
 function Header({ selected, setSelected, titles }) {
@@ -20,13 +22,13 @@ function Header({ selected, setSelected, titles }) {
         alignContent: 'center',
       }}
     >
-      <TouchableHighlight
+       <TouchableHighlight
         style={styles.logoContainer}
         underlayColor="transparent"
         onPress={() => setSelected(0)}
         accessible={true}
         accessibilityLabel={titles[0]}
-      >
+      > 
         <Image
           style={{ height: 50, width: 100 }}
           source={require('./../../assets/logo.png')}
@@ -57,7 +59,7 @@ function MenuItem(index, selected, setSelected, title) {
           alignSelf: 'center',
         }}
       >
-        {title}
+       {title} 
       </Text>
     </TouchableHighlight>
   );
